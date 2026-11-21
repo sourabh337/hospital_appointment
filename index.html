@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CityCare Hospital - Book an Appointment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="navbar">
+    <h1 class="logo">CityCare Hospital</h1>
+    <nav>
+      <a href="#doctors">Doctors</a>
+      <a href="#services">Services</a>
+      <a href="#booking">Book Appointment</a>
+      <a href="#my-appointments">My Appointments</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h2>Your Health, Our Priority</h2>
+    <p>Find a doctor, check our services, and book your appointment online in a few clicks.</p>
+    <a href="#booking" class="btn">Book Now</a>
+  </section>
+
+  <main>
+
+    <section id="doctors" class="section">
+      <h2>Our Doctors</h2>
+      <div class="filter-box">
+        <label for="specialtyFilter">Filter by specialty:</label>
+        <select id="specialtyFilter">
+          <option value="All">All Specialties</option>
+        </select>
+      </div>
+      <div id="doctorList" class="card-grid"></div>
+    </section>
+
+    <section id="services" class="section alt">
+      <h2>Our Services</h2>
+      <div id="serviceList" class="card-grid"></div>
+    </section>
+
+    <section id="booking" class="section">
+      <h2>Book an Appointment</h2>
+      <form id="bookingForm" novalidate>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="patientName">Full Name</label>
+            <input type="text" id="patientName" placeholder="Enter your full name">
+            <small class="error-text" id="patientNameError"></small>
+          </div>
+          <div class="form-group">
+            <label for="patientEmail">Email</label>
+            <input type="email" id="patientEmail" placeholder="you@example.com">
+            <small class="error-text" id="patientEmailError"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="patientPhone">Phone (10 digits)</label>
+            <input type="text" id="patientPhone" placeholder="03001234567">
+            <small class="error-text" id="patientPhoneError"></small>
+          </div>
+          <div class="form-group">
+            <label for="doctorSelect">Doctor</label>
+            <select id="doctorSelect"></select>
+            <small class="error-text" id="doctorSelectError"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="serviceSelect">Service</label>
+            <select id="serviceSelect"></select>
+            <small class="error-text" id="serviceSelectError"></small>
+          </div>
+          <div class="form-group">
+            <label for="appointmentDate">Date</label>
+            <input type="date" id="appointmentDate">
+            <small class="error-text" id="appointmentDateError"></small>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="timeSelect">Time</label>
+            <select id="timeSelect"></select>
+            <small class="error-text" id="timeSelectError"></small>
+          </div>
+        </div>
+
+        <button type="submit" class="btn full-width">Confirm Appointment</button>
+      </form>
+      <p id="formMessage" class="message"></p>
+    </section>
+
+    <section id="my-appointments" class="section alt">
+      <h2>My Appointments</h2>
+      <div id="appointmentList"></div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <p>&copy; 2026 CityCare Hospital. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
